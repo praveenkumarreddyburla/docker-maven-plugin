@@ -28,7 +28,7 @@ public class PullOrPushResponseJsonHandler implements EntityStreamReaderUtil.Jso
         }
     }
 
-    private void logInfoMessage(JsonObject json) {
+    public void logInfoMessage(JsonObject json) {
         String value;
         if (json.has("stream")) {
             value = json.get("stream").getAsString().replaceFirst("\n$", "");
